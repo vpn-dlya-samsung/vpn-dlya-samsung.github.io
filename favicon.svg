@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#070D1F"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B6DE8"/>
+      <stop offset="100%" stop-color="#1248B8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4D9EFF"/>
+      <stop offset="100%" stop-color="#2B6DE8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Background rounded square — dark navy -->
+  <rect width="32" height="32" rx="8" fill="url(#bg)"/>
+  <!-- Subtle border glow -->
+  <rect width="32" height="32" rx="8" fill="none" stroke="rgba(43,109,232,0.35)" stroke-width="1"/>
+  <!-- Shield body — Samsung blue -->
+  <path d="M16 3.5 L27 7.8 L27 16.8 C27 23.5 22.2 28.8 16 30.5 C9.8 28.8 5 23.5 5 16.8 L5 7.8 Z" fill="url(#shield)" filter="url(#glow)"/>
+  <!-- Shield highlight -->
+  <path d="M16 5.6 L25.2 9.4 L25.2 16.8 C25.2 22.4 21 27.1 16 28.6 C11 27.1 6.8 22.4 6.8 16.8 L6.8 9.4 Z" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="0.7"/>
+  <!-- Lock body -->
+  <rect x="11.5" y="16.5" width="9" height="6.5" rx="1.5" fill="white" opacity="0.95"/>
+  <!-- Lock arc -->
+  <path d="M13.2 16.5 L13.2 14 C13.2 11.8 18.8 11.8 18.8 14 L18.8 16.5" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" opacity="0.95"/>
+  <!-- Keyhole -->
+  <circle cx="16" cy="19.5" r="1.1" fill="url(#accent)"/>
+  <rect x="15.45" y="20.3" width="1.1" height="1.5" rx="0.4" fill="url(#accent)"/>
+  <!-- Samsung S-curve accent on top right -->
+  <circle cx="25" cy="8" r="2.2" fill="none" stroke="rgba(77,158,255,0.5)" stroke-width="0.8"/>
+  <circle cx="25" cy="8" r="1.2" fill="rgba(43,109,232,0.6)"/>
+</svg>
